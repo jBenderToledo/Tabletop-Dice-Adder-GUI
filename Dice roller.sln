@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dice roller", "Dice roller\Dice roller.csproj", "{A20A93D6-3037-452F-86A8-C22CB95CD894}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceRoller", "Dice roller\DiceRoller.csproj", "{A20A93D6-3037-452F-86A8-C22CB95CD894}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
