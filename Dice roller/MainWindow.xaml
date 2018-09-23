@@ -8,15 +8,15 @@
         Title="Dice Rolling Simulator 2018" 
         ResizeMode="NoResize" SizeToContent="WidthAndHeight"
         KeyDown="Window_KeyDown">
-    <Border BorderBrush="Black" BorderThickness="10" Margin="0,0,0,0" Width="800" Height="600">
-        <Grid Width="780" Height="580" Margin="0,0,0,0" Background="DarkGray">
+    <Border BorderBrush="Black" BorderThickness="10" Margin="0,0,0,0" Width="800" Height="500">
+        <Grid Width="780" Height="480" Margin="0,0,0,0" Background="DarkGray">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                    <RowDefinition Height="50" />
+                    <RowDefinition Height="30" />
                     <!--Gap at top-->
                     <RowDefinition Height="30" />
                     <!--D4-->
@@ -37,7 +37,7 @@
                     <RowDefinition Height="*" />
                     <!--Space reserved for CLEAR BUTTON-->
 
-                    <RowDefinition Height="50" />
+                    <RowDefinition Height="0" />
                     <!--(the rest of it)-->
                 </Grid.RowDefinitions>
 
@@ -145,7 +145,7 @@
                         FontSize="32" x:Name="ClearButton"/>
 
             <TextBox Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="2" x:Name="ResultsBox"
-                     HorizontalAlignment="Right" Height="50" TextWrapping="Wrap"
+                     HorizontalAlignment="Left" Height="50" TextWrapping="Wrap"
                      Text="Results" VerticalAlignment="Center" Width="400"
                      FontSize="32" TextAlignment="Right"
                      Margin="0,0,35,0"

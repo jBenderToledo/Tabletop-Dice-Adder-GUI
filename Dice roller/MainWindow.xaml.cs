@@ -41,7 +41,11 @@ namespace DiceRoller
 
             for (long i = 0; i < count; i++)
             {
-                sum += roll.Next(size) + 1;
+                if (i % 1000 == 0)
+                    roll = new Random();
+
+                sum += roll.Next(size);
+                sum++;
             }
 
             return sum;
