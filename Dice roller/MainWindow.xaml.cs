@@ -91,6 +91,9 @@ namespace DiceRoller
         /// <param name="e"></param>
         private void RollButton_Click(object sender, RoutedEventArgs e)
         {
+            String negativeValueError = "ERROR: negative value(s)";
+            String otherError = "nAn";
+
             long d4Count;
             long d6Count;
             long d8Count;
@@ -108,14 +111,25 @@ namespace DiceRoller
                 d20Count = long.Parse(D20Input.Text);
 
                 if (new long[] { d4Count, d6Count, d8Count, d10Count, d12Count, d20Count }.Min() < 0)
-                    throw new FormatException("Oopsie poopsie");
+                {
+                    throw new FormatException(negativeValueError);
+                }
             }
-            catch (FormatException)
+            catch (FormatException ex)
             {
-                ResultsBox.Text = "nAn";
+                Console.Out.WriteLine(ex.Message);
+                if (ex.Message.Equals(negativeValueError))
+                {
+                    ResultsBox.Text = ex.Message;
+                }
+                else
+                {
+                    ResultsBox.Text = otherError;
+                }
+
                 return;
             }
-            catch (OverflowException)
+            catch (OverflowException ex)
             {
                 ResultsBox.Text = "! OVERFLOW ERROR !";
                 return;
